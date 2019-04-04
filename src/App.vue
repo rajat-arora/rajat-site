@@ -19,18 +19,21 @@
           </v-flex>
       </v-layout>
     </v-container>
+    <Footer> </Footer>
 </div>
 </template>
 
 <script>
 import Header from './components/Header';
 import Sidebar from './components/Sidebar';
+import Footer from './components/Footer';
 
 export default {
   name: 'App',
   components: {
     Header,
-    Sidebar
+    Sidebar,
+    Footer
   },
   data () {
     return {
