@@ -3,7 +3,7 @@
         <router-link to="/"><h1 class="sidebar-name">Rajat Arora</h1></router-link>
         <p>DevOps & Software Engineer.</p>
         <p>Currently: Exploring new challenges in the software industry.</p>
-        <p> Follow me at  <a href="#">  <font-awesome-icon :icon="['fab', 'twitter']" /> twitter</a></p>
+        <p> Follow me at  <a href="https://twitter.com/rajatonit">  <font-awesome-icon :icon="['fab', 'twitter']" /> twitter</a></p>
         <div v-bind:class="[$isMobile() ? navMobile : nav]">
         <router-link   to="/" class="btn">Home</router-link>
         <router-link  to="/about" class="btn" >About</router-link>
