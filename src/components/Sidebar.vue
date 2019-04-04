@@ -5,9 +5,9 @@
         <p>Currently: Exploring new challenges in the software industry.</p>
         <p> Follow me at  <a href="#">  <font-awesome-icon :icon="['fab', 'twitter']" /> twitter</a></p>
         <div v-bind:class="[$isMobile() ? navMobile : nav]">
-        <v-btn depressed  to="/" color="primary">Home</v-btn>
-        <v-btn depressed to="/about"  color="primary">About</v-btn>
-        <v-btn depressed to="/projects" color="primary">Projects</v-btn>
+        <router-link   to="/" class="btn">Home</router-link>
+        <router-link  to="/about" class="btn" >About</router-link>
+        <router-link  to="/projects" class="btn">Projects</router-link>
      </div>
     </div>
 </template>
@@ -36,9 +36,26 @@ data() {
   padding: 2rem;
   text-align: center;
 }
-.v-btn{
+.btn{
     text-decoration: none;
     border-bottom: 0px;
+    background-color: #0151ba !important;
+    font-weight: 700;
+    font-size: 1.4rem;
+    color: white;
+    display: block;
+    margin-bottom: .25rem;
+    padding-top: 0;
+    padding-left: .5rem;
+}
+.btn:hover{
+  background-color: #7ef1f9 !important;
+  border-bottom: 0px;
+  text-decoration: none;
+
+}
+.btn::before{
+    background-color: #7ef1f9 !important;
 
 }
 .nav{
@@ -60,10 +77,5 @@ data() {
     border-style: none;
     border-width: 0;
 }
-.sidebar-name:hover{
-  color: #7ef1f9;
-}
-.v-btn {
-    background-color: #0151ba !important;
-}
+
 </style>

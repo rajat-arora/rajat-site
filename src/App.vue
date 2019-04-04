@@ -1,7 +1,7 @@
 <template>
  <div id="app">
   <Header> </Header>
-  <v-container grid-list-md class="content avenir">
+  <v-container grid-list-md class="content">
       <v-layout row wrap v-if="!$isMobile()">
           <v-flex xs8>
             <router-view></router-view>
@@ -36,9 +36,6 @@ export default {
     return {
       //
     }
-  },
-  mounted(){
-    console.log(this.$isMobile())
   }
 }
 </script>
@@ -46,6 +43,8 @@ export default {
 <style>
  body, html, #app {
     height: 100%;
+    font-family: 'Karla', sans-serif;
+    line-height: 1.5;
 }
 a {
     color: #0151ba;
@@ -83,11 +82,6 @@ a.no-slide:hover:before {
 
 a.no-slide:hover {
     color: #7ef1f9
-}
-.avenir {
-    font-family: avenir next,avenir,sans-serif;
-    line-height: 1.5;
-
 }
 
 ::selection {

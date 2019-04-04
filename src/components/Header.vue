@@ -30,9 +30,8 @@ a{
 }
 
 h1{
-    font-weight: bold;
+    font-weight: 400;
     font-size: 4rem;
-    font-family: avenir next,avenir,sans-serif;
 }
 
 .hero-text {
@@ -50,7 +49,7 @@ h1{
 }
 .hero-home{
     position: absolute;
-    top: 1rem;
+    top: 0.5rem;
     display: block;
 }
 a{
