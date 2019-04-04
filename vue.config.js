@@ -10,6 +10,16 @@ module.exports = {
           target: 'https://opeak.ca',
           ws: true,
           changeOrigin: true
+        },
+        '^/abouts': {
+          target: 'https://opeak.ca',
+          ws: true,
+          changeOrigin: true
+        },
+        '^/projects': {
+          target: 'https://opeak.ca',
+          ws: true,
+          changeOrigin: true
         }
       }
     }

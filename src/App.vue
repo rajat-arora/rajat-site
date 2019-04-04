@@ -36,11 +36,6 @@ export default {
  body, html, #app {
     height: 100%;
 }
-::selection {
-    background-color: #7ef1f9;
-    color: #0151ba;
-}
-
 a {
     color: #0151ba;
     text-decoration: none;
@@ -84,5 +79,9 @@ a.no-slide:hover {
 
 }
 
+::selection {
+    background-color: #7ef1f9;
+    color: #0151ba;
+}
 </style>
 

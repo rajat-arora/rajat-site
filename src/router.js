@@ -3,6 +3,7 @@ import Router from 'vue-router'
 import Default from './views/Default.vue'
 import Posts from './views/Posts.vue'
 import About from './views/About.vue'
+import Projects from './views/Projects.vue'
 
 Vue.use(Router)
 
@@ -14,6 +15,11 @@ export default new Router({
       path: '/about',
       name: 'about',
       component: About
+    },
+    {
+      path: '/projects',
+      name: 'projects',
+      component: Projects
     },
     {
       path: '/post/:id',

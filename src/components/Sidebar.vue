@@ -7,7 +7,7 @@
      <div class="nav">
         <v-btn depressed  to="/" color="primary">Home</v-btn>
         <v-btn depressed to="/about"  color="primary">About</v-btn>
-        <v-btn depressed  color="primary">Code</v-btn>
+        <v-btn depressed to="/projects" color="primary">Projects</v-btn>
      </div>
     </div>
 </template>

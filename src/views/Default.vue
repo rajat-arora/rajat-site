@@ -25,7 +25,7 @@
     },
     async mounted(){
       try{
-        const posts = await axios.get("https://opeak.ca/posts");
+        const posts = await axios.get("/posts");
         await posts.data.forEach(post =>{
           const date = new Date(parseInt(post.created_at))
           const year = date.getFullYear();

@@ -20,14 +20,14 @@ export default {
     },
     async mounted(){
         try{
-            const res = await axios.get(`https://opeak.ca/posts/${this.$route.params.id}`);
+            const res = await axios.get(`/posts/${this.$route.params.id}`);
             const post = res.data;
             const date = new Date(parseInt(res.data.created_at));
             this.dateCreated = date.toString().match("[A-Za-z ]+[0-9]{2} ")[0] + ", " + date.getFullYear();
             const converter = new showdown.Converter();
             this.desc = converter.makeHtml(post.description);
             this.$store.dispatch('setPageTitle', post.title);
-            const urlImage = res.data.img ? "https://opeak.ca" + res.data.img.url : 'https://images.unsplash.com/photo-1504985954001-5737b2af529e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1079&q=80';
+            const urlImage = res.data.img ? "https://rajatonit.com/" + res.data.img.url : 'https://images.unsplash.com/photo-1504985954001-5737b2af529e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1079&q=80';
             this.$store.dispatch('setImageHeader', urlImage);
 
             this.loading =false;
