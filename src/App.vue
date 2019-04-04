@@ -47,7 +47,6 @@ a {
     border-bottom: 3px solid #7ef1f9;
     padding-top: 15px;
     position: relative;
-    font-size: 1.9rem;
 }
 
 a:before {

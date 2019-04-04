@@ -1,5 +1,23 @@
 <template>
-  <div class="about">
-    <h1>This is an about page</h1>
+  <div>
+    new blog who dis
+
   </div>
 </template>
+
+<script>
+export default {
+   data(){
+        return{
+            msg: ''
+        }
+    },
+    mounted (){
+      try{
+        this.$store.dispatch('setPageTitle', 'About');
+      }catch(err){
+        
+      }
+    }
+}
+</script>

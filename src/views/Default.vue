@@ -5,7 +5,7 @@
               <li v-for="post in year" :key="post.id" class="mb4-l mb3">
                 <span>{{post.stringDate}}</span>
                 <br>
-                <router-link  v-bind:to="{ name: 'posts', params: { id: post.id }}">{{ post.title }}</router-link>
+                <router-link  v-bind:to="{ name: 'post', params: { id: post.id }}">{{ post.title }}</router-link>
               </li>
             </ul>
     </div>
@@ -47,7 +47,8 @@
           }
 
         })
-
+        this.$store.dispatch('setPageTitle','RAJAT ARORA');
+        this.$store.dispatch('setImageHeader', 'https://images.unsplash.com/photo-1504985954001-5737b2af529e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1079&q=80');
         this.loadingApi = false;
     
 
@@ -59,7 +60,10 @@
   }
 </script>
 
-<style>
+<style scoped>
+a{
+   font-size: 1.9rem;
+}
   .list{
     list-style-type: none !important;
     padding: 0;
