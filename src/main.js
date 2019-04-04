@@ -9,8 +9,10 @@ import {faTwitter} from '@fortawesome/free-brands-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 import 'vuetify/dist/vuetify.min.css' // Ensure you are using css-loader
 import VueAnalytics from 'vue-analytics'
+import VueMobileDetection from "vue-mobile-detection";
 
 library.add(faTwitter)
+Vue.use(VueMobileDetection);
 
 Vue.component('font-awesome-icon', FontAwesomeIcon)
 Vue.config.productionTip = false

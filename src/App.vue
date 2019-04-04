@@ -2,12 +2,20 @@
  <div id="app">
   <Header> </Header>
   <v-container grid-list-md class="content avenir">
-      <v-layout row wrap>
+      <v-layout row wrap v-if="!$isMobile()">
           <v-flex xs8>
             <router-view></router-view>
           </v-flex>
           <v-flex xs4>
             <Sidebar></Sidebar>
+          </v-flex>
+      </v-layout>
+       <v-layout row wrap v-else>
+           <v-flex xs12>
+            <Sidebar></Sidebar>
+          </v-flex>
+          <v-flex xs12>
+            <router-view></router-view>
           </v-flex>
       </v-layout>
     </v-container>
@@ -28,6 +36,9 @@ export default {
     return {
       //
     }
+  },
+  mounted(){
+    console.log(this.$isMobile())
   }
 }
 </script>
