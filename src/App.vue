@@ -19,7 +19,7 @@
           </v-flex>
       </v-layout>
     </v-container>
-    <Footer> </Footer>
+    <!-- <Footer> </Footer> -->
 </div>
 </template>
 
